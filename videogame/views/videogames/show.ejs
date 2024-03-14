@@ -1,0 +1,20 @@
+<% layout('layout/boilerplate') %>
+    <div style="text-align: center;">
+        <h1>
+            <%= videogame.title %>
+        </h1>
+        <img src="<%= videogame.image %>" alt="<%= videogame.title %>" style="max-width: 50%; height: auto;">
+        <h2>
+            <%= videogame.price %>
+        </h2>
+        <p>
+            <%= videogame.description %>
+        </p>
+        <form action="/videogames/<%= videogame._id %>?_method=DELETE" method="POST" style="margin-top: 20px;">
+            <button type="button" class="btn btn-danger">DELETE</button>
+        </form>
+        <footer style="margin-top: 20px;">
+            <a href="/videogames/<%= videogame._id %>/edit" style="margin-right: 15px;">Edit</a>
+            <a href="/videogames">All Games</a>
+        </footer>
+    </div>

@@ -1,0 +1,15 @@
+<% layout('layout/boilerplate') %>
+    <h1> ALL GAMES</h1>
+    <h3><a href="/videogames/new">Add Game</a></h3>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: stretch;">
+        <% videogames.forEach(function(game) { %>
+            <div style="width: 20%; margin-bottom: 20px; text-align: center;">
+                <a href="/videogames/<%= game._id %>" style="text-decoration: none; color: black;">
+                    <img src="<%= game.image %>" alt="<%= game.title %>" style="width: 100%; height: auto;">
+                    <h4>
+                        <%= game.title %>
+                    </h4>
+                </a>
+            </div>
+            <% }); %>
+    </div>
