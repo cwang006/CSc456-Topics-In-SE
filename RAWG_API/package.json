@@ -1,0 +1,11 @@
+{
+    "name": "rawg-api-tester",
+    "version": "1.0.0",
+    "description": "testing RAWG api calling",
+    "scripts": {
+      "test": "jest"
+    },
+    "author": "me",
+    "license": "ISC"
+  }
+  
