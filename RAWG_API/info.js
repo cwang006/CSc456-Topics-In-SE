@@ -2,29 +2,14 @@
 const API_KEY = "";
 const API_URL = "https://api.rawg.io/api/games?key=" + API_KEY;
 
-function fetchData(URL){
-  fetch(URL)
-  .then(response => response.json())
-  .then(data => {
-    const games_Listed = data.results;
-    let count = 0;
+async function fetchData(URL){
+    try{
+        const result = await fetch(API_URL);
+        const games = await result.json();
+        console.log(games);
 
-    games_Listed.forEach(game => {
-      const game_name = game.name;
-      const release_date = game.released;
-      const tags = game.tags.map(tag => tag.name);
-
-      count += 1;
-
-      console.log(`Name: ${game_name}`);
-      console.log(`Released: ${release_date}`);
-      console.log(`Tags: ${tags}`);
-      console.log("\n");
-    });
-
-    console.log(`Total Games: ${count}`);
-  })
-  .catch(error => console.error('Error fetching data:', error));
+    } 
+    catch (error){
+        console.log('Error fetching data:', error);
+    }
 }
-
-fetchData(API_URL);
