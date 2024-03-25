@@ -1,11 +1,15 @@
 {
-    "name": "rawg-api-tester",
-    "version": "1.0.0",
-    "description": "testing RAWG api calling",
-    "scripts": {
-      "test": "jest"
-    },
-    "author": "me",
-    "license": "ISC"
+  "name": "jest-tester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "endpoint.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
-  
+}
